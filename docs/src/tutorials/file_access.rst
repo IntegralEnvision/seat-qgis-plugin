@@ -27,7 +27,6 @@ Upon approval, you will receive access to a collection of folders containing the
 
 ..  code-block:: none
     :caption: DEMO Directory 
-    :emphasize-lines: 2, 7, 18, 25
 
       DEMO
       ├───DEMO paracousti
@@ -36,19 +35,17 @@ Upon approval, you will receive access to a collection of folders containing the
       │   ├───receptor
       │   └───species
       ├───DEMO structured
-      │   ├───boundary-condition
       │   ├───devices-not-present
       │   ├───devices-present
-      │   ├───Outputs
+      │   ├───Output
+      │   │   └───ShearStress_with_receptor
       │   ├───power_files
       │   │   ├───16x6
       │   │   └───4x4
+      │   ├───probabilities
       │   ├───receptor
-      │   ├───run-order
       │   └───_plugin-config-files
       ├───DEMO unstructured
-      │   ├───boundary-condition
-      │   ├───Outputs
       │   ├───receptor
       │   ├───tanana_dev_1
       │   ├───tanana_dev_9

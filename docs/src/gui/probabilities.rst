@@ -24,8 +24,6 @@ For added flexibility, you can incorporate an 'Exclude' column, enabling you to 
 
 **Example of a Probabilities Input**
 
-Below is an illustrative table:
-
 +------+--------+--------+-------------+---------+-----------+---------+
 | Hs[m]| Tp[s]  | Dp[deg]| % of dir bin| % of yr | run order | Exclude |
 +------+--------+--------+-------------+---------+-----------+---------+

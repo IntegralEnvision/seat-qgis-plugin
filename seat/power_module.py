@@ -232,7 +232,7 @@ def create_power_heatmap(DEVICE_POWER, crs=None):
         matplotlib figure handle.
 
     """
-    adjust_x = -360 if crs==4326 else 0
+    adjust_x = -360 if crs == 4326 else 0
 
     fig, ax = plt.subplots(figsize=(6, 4))
     lowerx = np.inf
@@ -254,7 +254,8 @@ def create_power_heatmap(DEVICE_POWER, crs=None):
                       color=cmap(norm(device['Power [W]']*1e-6))))
         lowerx = np.nanmin([lowerx, device.lower_left[0]+adjust_x])
         lowery = np.nanmin([lowery, device.lower_left[1]])
-        upperx = np.nanmax([upperx, device.lower_left[0]+adjust_x + device.width])
+        upperx = np.nanmax(
+            [upperx, device.lower_left[0]+adjust_x + device.width])
         uppery = np.nanmax([uppery, device.lower_left[1] + device.height])
     xr = np.abs(np.max([lowerx, upperx]) - np.min([lowerx, upperx]))
     yr = np.abs(np.max([lowery, uppery]) - np.min([lowery, uppery]))

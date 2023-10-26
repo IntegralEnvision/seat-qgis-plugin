@@ -1,21 +1,32 @@
-
+.. _prepare_style_files:
 
 Setting Up Style Files
 ======================
 
-In order for the style files to work you will need to set the full path in each of the csv files.
+In the demo we have provided style files fou you to use. Before you can use them you need to place the full file path to the style files in the csv files. To do this you must replace ``<style_folder>`` with the path to the style_folder on your machine. For example if you have placed the style files in ``C:\Users\USER\Desktop\DEMO\style_files`` you would replace ``<style_folder>`` with ``C:\Users\USER\OneDrive\Desktop\DEMO\style_files``. There is a script provided to do this for you is you have python you can call `localize_style_path.py` from the command line. If you do not have python you can open the csv files in a text editor and replace ``<style_folder>`` with the path to the style_folder on your machine.
+
+.. code-block:: bash
+    :caption: localize_style_path.py
+
+    python localize_style_files.py
+    Please enter the path to the directory containing default files:
+    C:\Users\sterl\OneDrive\Desktop\DEMO\style_files
+
+    Paths in default files in directory C:\Users\sterl\OneDrive\Desktop\DEMO\style_files have been updated and saved as CSV.
+
+
+The below shows the initial contents of the style_files folder. You will need to convert each of these to  csv files as described above to use them in the demo.
 
 ..  code-block:: none
     :caption: style_files Folder Contents
 
     DEMO
     └───style_files
-        │   Acoustics_blue_whale - Copy.csv
-        │   Acoustics_blue_whale.csv
-        │   Acoustics_fake_whale.csv
-        │   Shear_Stress - Structured.csv
-        │   Shear_Stress - Unstructured.csv
-        │   Velocity.csv
+        │   Acoustics_blue_whale.default
+        │   Acoustics_fake_whale.default
+        │   Shear_Stress - Structured.default
+        │   Shear_Stress - Unstructured.default
+        │   Velocity.default
         │
         └───Layer Style
                 acoustics_density_demo.qml
@@ -32,28 +43,3 @@ In order for the style files to work you will need to set the full path in each 
                 velocity_continuous_stressor_vik.qml
                 velocity_continuous_stressor_with_receptor.qml
                 velocity_motility_classification_vik.qml
-
-
-For example if you open **Acoustics_blue_whale.csv** you will see the following:
-
-+-----------------+-----------------------------------------------------------------------------------------------+
-| Type            | Style                                                                                         |
-+=================+===============================================================================================+
-| Stressor        | H:\\Projects\\C1308_SEAT\\SEAT_inputs\\style_files\\Layer Style\\acoustics_stressor_demo.qml  |
-+-----------------+-----------------------------------------------------------------------------------------------+
-| Threshold       | H:\\Projects\\C1308_SEAT\\SEAT_inputs\\style_files\\Layer Style\\acoustics_threshold_demo.qml |
-+-----------------+-----------------------------------------------------------------------------------------------+
-| Species Percent | H:\\Projects\\C1308_SEAT\\SEAT_inputs\\style_files\\Layer Style\\acoustics_percent_demo.qml   |
-+-----------------+-----------------------------------------------------------------------------------------------+
-| Species Density | H:\\Projects\\C1308_SEAT\\SEAT_inputs\\style_files\\Layer Style\\acoustics_density_demo.qml   |
-+-----------------+-----------------------------------------------------------------------------------------------+
-
-You will need to set the full path to your current working directory for these to work. E.g. replacing :file:`H:\\Projects\\C1308_SEAT\\SEAT_inputs\\` with the path to your style_files directory.
-
-A CLI script is provided to do this for you. Simply run the following command from the root of the seat source directory:
-
-.. code-block:: bash
-
-    $ cd seat-qgis-plugin/seat
-    $ python adjust_style_path.py "C:\Users\sterl\OneDrive\Desktop\DEMO\style_files"
-    Paths in CSV files in directory C:\Users\sterl\OneDrive\Desktop\DEMO\style_files have been updated.

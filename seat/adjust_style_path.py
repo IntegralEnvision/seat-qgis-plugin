@@ -3,38 +3,33 @@ import csv
 import argparse
 
 
-def replace_path_in_csv(csv_file, old_path, new_path):
+def replace_path_in_csv(default_file, old_path, new_path):
     """
-    Replace the old_path with new_path in the given csv file.
+    Replace the old_path with new_path in the given default file and save as a csv file.
     """
-    with open(csv_file, 'r', newline='') as file:
-        reader = csv.reader(file)
-        rows = list(reader)
+    with open(default_file, 'r', newline='') as file:
+        rows = file.readlines()
 
-    # Modify the path in the csv content
+    # Modify the path in the default content
     for i, row in enumerate(rows):
-        for j, cell in enumerate(row):
-            if old_path in cell:
-                rows[i][j] = cell.replace(old_path, new_path)
+        if old_path in row:
+            rows[i] = row.replace(old_path, new_path)
 
-    # Write the modified content back to csv
+    # Change the file extension to csv and write the modified content back
+    csv_file = os.path.splitext(default_file)[0] + '.csv'
     with open(csv_file, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerows(rows)
+        file.writelines(rows)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Update path in CSV files.")
-    parser.add_argument(
-        "dir_path", help="Path to the directory containing CSV files.")
-    args = parser.parse_args()
+    dir_path = input(
+        "Please enter the path to the directory containing default files: ")
+    old_path = "<style_folder>"
 
-    old_path = "H:\\Projects\\C1308_SEAT\\SEAT_inputs\\style_files"
-
-    for filename in os.listdir(args.dir_path):
-        if filename.endswith('.csv'):
-            full_file_path = os.path.join(args.dir_path, filename)
-            replace_path_in_csv(full_file_path, old_path, args.dir_path)
+    for filename in os.listdir(dir_path):
+        if filename.endswith('.default'):
+            full_file_path = os.path.join(dir_path, filename)
+            replace_path_in_csv(full_file_path, old_path, dir_path)
 
     print(
-        f"Paths in CSV files in directory {args.dir_path} have been updated.")
+        f"Paths in default files in directory {dir_path} have been updated and saved as CSV.")

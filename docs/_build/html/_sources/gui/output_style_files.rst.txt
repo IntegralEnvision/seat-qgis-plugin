@@ -40,3 +40,4 @@ This is a .csv file pointing to the absolute file path for the QGIS style files 
    | Species Density| LayerStyle\\acoustics_stressor_bluewhale.qml   |
    +----------------+------------------------------------------------+
 
+Please see :ref:`prepare_style_files` for a walk through on how to prepare style files.

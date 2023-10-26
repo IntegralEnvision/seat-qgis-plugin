@@ -11,8 +11,9 @@ This section covers tutorials put together by the SEAT team to help users quickl
    
    file_access.rst
    prepare_style_files.rst
-   tanana.rst
-   pmec.rst
+   quick_map_services.rst
+   tanana/tanana.rst
+   pmec/pmec.rst
 
 
 

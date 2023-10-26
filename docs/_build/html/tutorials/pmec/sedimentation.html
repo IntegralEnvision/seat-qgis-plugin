@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sedimentation &amp; Power Generation &mdash; SEAT [1.0.0-beta1] documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=9eba97ea"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Acoustic Effects" href="acoustics.html" />
+    <link rel="prev" title="PMEC Site" href="pmec.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SEAT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../file_access.html">Accessing Tutorial Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prepare_style_files.html">Setting Up Style Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_map_services.html">Quick Map Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tanana/tanana.html">Tanana River Site</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pmec.html">PMEC Site</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sedimentation &amp; Power Generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="acoustics.html">Acoustic Effects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/modules.html">Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SEAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorials.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="pmec.html">PMEC Site</a></li>
+      <li class="breadcrumb-item active">Sedimentation &amp; Power Generation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/pmec/sedimentation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sedimentation-power-generation">
+<h1>Sedimentation &amp; Power Generation<a class="headerlink" href="#sedimentation-power-generation" title="Link to this heading"></a></h1>
+<section id="input">
+<h2>Input<a class="headerlink" href="#input" title="Link to this heading"></a></h2>
+<p>If you have not done so before you will need to create input files for the default files provided. To do so naviage to <code class="file docutils literal notranslate"><span class="pre">DEMO/structured</span> <span class="pre">DEMO/</span></code>. In that folder you will find a number of .default files. You need to open these and replace <code class="docutils literal notranslate"><span class="pre">&lt;input_folder&gt;</span></code> with the path to the DEMO unstructured folder on your machine and <code class="docutils literal notranslate"><span class="pre">&lt;style_folder&gt;</span></code> with the path to the style_files folder on your machine. If you use python a script titled <code class="docutils literal notranslate"><span class="pre">localize_input_files.py</span></code> will do this for you. You can run this script by navigating to the DEMO unstructured folder in a terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">localize_input_files.py</span></code>. If you do not have python you can open the files in a text editor and replace the text manually or with a find and replace feature. If changing via a text editor save the file as a .ini file.</p>
+<p>Example use of the script is shown below. After running the script .ini files will appear in the DEMO unstructured folder. These are the files you will use to load the inputs into the SEAT GUI.</p>
+<p>With the <em>ini files created, use the **Load GUI Inputs*</em> button located at the bottom left of the SEAT GUI, navigate to <code class="file docutils literal notranslate"><span class="pre">DEMO/unstructured</span> <span class="pre">DEMO/shear_stress_with_receptor_demo.ini</span></code>, and click OK to load the inputs. If you need detailed instructions on how to load inputs, please refer to the <a class="reference internal" href="../../gui/save_load_config.html#save-load-config"><span class="std std-ref">Save &amp; Load Configuration</span></a> section in the <a class="reference internal" href="../../gui/gui.html#gui"><span class="std std-ref">Graphical User Interface</span></a> documention.</p>
+<p>For this case we will use <code class="docutils literal notranslate"><span class="pre">DEMO</span> <span class="pre">structured/shear_stress_with_receptor.ini</span></code>. This file contains the following inputs:</p>
+<ul class="simple">
+<li><p>This set of inputs includes a GeoTiff of grain sizes as a receptor layer</p></li>
+<li><p>power generation files at .OUT files with georeferencing in .pol files</p></li>
+<li><p>The SWAN model files are concatenated into a single .nc file</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/PMEC_case_input.webp"><img alt="PMEC SWAN Shear Stress input" src="../../_images/PMEC_case_input.webp" style="width: 802.0px; height: 619.0px;" /></a>
+</figure>
+<p>To start the analysis click OK. The analysis will take a few minutes to run. If an error occurs a yellow bar will appear at the top of the QGIS window. Click Show Stack Trace to see the error message. Most likely the error is due to a missing input file or incorrect file path. Make sure you have created the .csv files in the style_files folder and that the paths in the .ini files are correct. If you are still having trouble please contact the SEAT team by creating an issue on the SEAT GitHub page detailing how you arrived at the error, what the error is, and what you have checked so far.</p>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<p>If you are using the Deafult QGIS layout after succesfully running SEAT you will see four layers added to the Layers Panel.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/PMEC_layers.webp"><img alt="PMEC Result Layers" src="../../_images/PMEC_layers.webp" style="width: 222.75px; height: 502.5px;" /></a>
+</figure>
+<p>Each layer will look as shown below. To add the map layer see the <a class="reference internal" href="../quick_map_services.html#map"><span class="std std-ref">Quick Map Services</span></a> section. The sedimentation analysis indicates a predominant decrease in sediment erosion and increase in sediment deposition in the lee of the array, with less mobility occurring over larger sediment size classes.</p>
+<table class="image-matrix docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../../_images/PMEC_grainsize.webp"><img alt="Grainsize" class="align-center" src="../../_images/PMEC_grainsize.webp" style="width: 457.0px; height: 290.25px;" /></a>
+<div style="text-align: center;">Grainsize</div></td>
+<td><a class="reference internal image-reference" href="../../_images/PMEC_stressor_reclassified.webp"><img alt="Stressor Reclassified" class="align-center" src="../../_images/PMEC_stressor_reclassified.webp" style="width: 456.0px; height: 289.75px;" /></a>
+<div style="text-align: center;">Stressor Reclassified</div></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="../../_images/PMEC_stressor_with_receptor.webp"><img alt="Stressor with Receptor" class="align-center" src="../../_images/PMEC_stressor_with_receptor.webp" style="width: 456.75px; height: 288.75px;" /></a>
+<div style="text-align: center;">Stressor with Receptor</div></td>
+<td><a class="reference internal image-reference" href="../../_images/PMEC_stressor.webp"><img alt="Stressor" class="align-center" src="../../_images/PMEC_stressor.webp" style="width: 456.5px; height: 290.25px;" /></a>
+<div style="text-align: center;">Stressor</div></td>
+</tr>
+</tbody>
+</table>
+<p>The specified output folder contains the following files. Highlighted lines will be shown below.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Output Files created</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span> Output
+<span class="linenos"> 2</span> └───ShearStress_with_receptor
+<span class="hll"><span class="linenos"> 3</span>       BC_probability_wPower.csv
+</span><span class="linenos"> 4</span>       calculated_stressor.csv
+<span class="linenos"> 5</span>       calculated_stressor.tif
+<span class="linenos"> 6</span>       calculated_stressor_at_receptor.csv
+<span class="linenos"> 7</span>       calculated_stressor_reclassified.csv
+<span class="linenos"> 8</span>       calculated_stressor_reclassified.tif
+<span class="linenos"> 9</span>       calculated_stressor_reclassified_at_receptor.csv
+<span class="linenos">10</span>       calculated_stressor_with_receptor.csv
+<span class="linenos">11</span>       calculated_stressor_with_receptor.tif
+<span class="linenos">12</span>       Device Number Location.png
+<span class="hll"><span class="linenos">13</span>       Device_Power.png
+</span><span class="linenos">14</span>       Obstacle_Locations.png
+<span class="linenos">15</span>       Obstacle_Matching.csv
+<span class="linenos">16</span>       Power_per_device_annual.csv
+<span class="linenos">17</span>       Power_per_device_per_scenario.csv
+<span class="linenos">18</span>       receptor.tif
+<span class="linenos">19</span>       Scaled_Power_Bars_per_run_obstacle.png
+<span class="linenos">20</span>       Scaled_Power_per_device_per_scenario.png
+<span class="linenos">21</span>       tau_without_devices.tif
+<span class="linenos">22</span>       tau_with_devices.tif
+<span class="linenos">23</span>       Total_Scaled_Power_Bars_per_obstacle.png
+<span class="linenos">24</span>       Total_Scaled_Power_Bars_per_Run.png
+<span class="hll"><span class="linenos">25</span>       Total_Scaled_Power_per_Device_.png
+</span><span class="linenos">26</span>       _20231023.log
+<span class="linenos">27</span>       _20231024.log
+</pre></div>
+</div>
+</div>
+<p>The power generation is saved as individual images and tables in the selected output folder.</p>
+<table class="image-side-by-side docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../../_images/Total_Scaled_Power_per_Device.webp"><img alt="PMEC power generated per device bar plots" class="align-center" src="../../_images/Total_Scaled_Power_per_Device.webp" style="width: 500.0px; height: 333.0px;" /></a>
+<div style="text-align: center;">PMEC power generated per device bar plots</div></td>
+<td><a class="reference internal image-reference" href="../../_images/Device_Power.webp"><img alt="PMEC power generated per device heat map" class="align-center" src="../../_images/Device_Power.webp" style="width: 500.0px; height: 333.0px;" /></a>
+<div style="text-align: center;">PMEC power generated per device heat map</div></td>
+</tr>
+</tbody>
+</table>
+<p>PMEC power generated per hydrodynamic scenario</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Hs
+[m]</p></td>
+<td><p>Tp
+[s]</p></td>
+<td><p>Dp
+[deg]</p></td>
+<td><p>% of dir bin</p></td>
+<td><p>% of
+yr</p></td>
+<td><p>run
+order</p></td>
+<td><p>Exclude</p></td>
+<td><p>Power_Run_Name</p></td>
+<td><p>Power [W]</p></td>
+</tr>
+<tr class="row-even"><td><p>1.76</p></td>
+<td><p>6.6</p></td>
+<td><p>221.8</p></td>
+<td><p>15.41</p></td>
+<td><p>0.39</p></td>
+<td><p>6</p></td>
+<td></td>
+<td><p>POWER_ABS_010.OUT</p></td>
+<td><p>9526874.11104</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.67</p></td>
+<td><p>8.62</p></td>
+<td><p>220.8</p></td>
+<td><p>40.68</p></td>
+<td><p>1.029</p></td>
+<td><p>16</p></td>
+<td></td>
+<td><p>POWER_ABS_004.OUT</p></td>
+<td><p>7461649.7576523</p></td>
+</tr>
+<tr class="row-even"><td><p>4.06</p></td>
+<td><p>10.16</p></td>
+<td><p>221.3</p></td>
+<td><p>23.47</p></td>
+<td><p>0.593</p></td>
+<td><p>20</p></td>
+<td></td>
+<td><p>POWER_ABS_021.OUT</p></td>
+<td><p>55647583.948375</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.37</p></td>
+<td><p>15.33</p></td>
+<td><p>224.0</p></td>
+<td><p>8.06</p></td>
+<td><p>0.204</p></td>
+<td><p>2</p></td>
+<td></td>
+<td><p>POWER_ABS_014.OUT</p></td>
+<td><p>7647446.853708</p></td>
+</tr>
+<tr class="row-even"><td><p>7.05</p></td>
+<td><p>12.6</p></td>
+<td><p>223.6</p></td>
+<td><p>3.42</p></td>
+<td><p>0.086</p></td>
+<td><p>24</p></td>
+<td><p>x</p></td>
+<td><p>POWER_ABS_008.OUT</p></td>
+<td><p>1557004.364389</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.11</p></td>
+<td><p>11.63</p></td>
+<td><p>223.8</p></td>
+<td><p>8.96</p></td>
+<td><p>0.227</p></td>
+<td><p>11</p></td>
+<td></td>
+<td><p>POWER_ABS_001.OUT</p></td>
+<td><p>2096482.510244</p></td>
+</tr>
+<tr class="row-even"><td><p>4.91</p></td>
+<td><p>13.62</p></td>
+<td><p>251.2</p></td>
+<td><p>11.99</p></td>
+<td><p>1.764</p></td>
+<td><p>23</p></td>
+<td></td>
+<td><p>POWER_ABS_019.OUT</p></td>
+<td><p>108518849.444376</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.7</p></td>
+<td><p>7.73</p></td>
+<td><p>244.8</p></td>
+<td><p>15.03</p></td>
+<td><p>2.212</p></td>
+<td><p>5</p></td>
+<td></td>
+<td><p>POWER_ABS_017.OUT</p></td>
+<td><p>61361227.458748</p></td>
+</tr>
+<tr class="row-even"><td><p>2.69</p></td>
+<td><p>9.8</p></td>
+<td><p>247.6</p></td>
+<td><p>26.75</p></td>
+<td><p>3.937</p></td>
+<td><p>17</p></td>
+<td></td>
+<td><p>POWER_ABS_018.OUT</p></td>
+<td><p>160789701.758536</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.23</p></td>
+<td><p>14.62</p></td>
+<td><p>248.8</p></td>
+<td><p>18.54</p></td>
+<td><p>2.729</p></td>
+<td><p>1</p></td>
+<td></td>
+<td><p>POWER_ABS_023.OUT</p></td>
+<td><p>284194057.07551</p></td>
+</tr>
+<tr class="row-even"><td><p>2.31</p></td>
+<td><p>17.54</p></td>
+<td><p>249.4</p></td>
+<td><p>3.97</p></td>
+<td><p>0.584</p></td>
+<td><p>14</p></td>
+<td></td>
+<td><p>POWER_ABS_006.OUT</p></td>
+<td><p>4375975.620376</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.94</p></td>
+<td><p>11.77</p></td>
+<td><p>250.6</p></td>
+<td><p>23.72</p></td>
+<td><p>3.49</p></td>
+<td><p>18</p></td>
+<td></td>
+<td><p>POWER_ABS_016.OUT</p></td>
+<td><p>73690186.40957</p></td>
+</tr>
+<tr class="row-even"><td><p>4.9</p></td>
+<td><p>14.43</p></td>
+<td><p>275.8</p></td>
+<td><p>8.78</p></td>
+<td><p>4.698</p></td>
+<td><p>22</p></td>
+<td><p>x</p></td>
+<td><p>POWER_ABS_020.OUT</p></td>
+<td><p>274670833.036</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.54</p></td>
+<td><p>8.62</p></td>
+<td><p>278.0</p></td>
+<td><p>20.9</p></td>
+<td><p>11.188</p></td>
+<td><p>4</p></td>
+<td></td>
+<td><p>POWER_ABS_011.OUT</p></td>
+<td><p>206396778.152828</p></td>
+</tr>
+<tr class="row-even"><td><p>3.66</p></td>
+<td><p>12.0</p></td>
+<td><p>277.2</p></td>
+<td><p>20.95</p></td>
+<td><p>11.212</p></td>
+<td><p>19</p></td>
+<td><p>x</p></td>
+<td><p>POWER_ABS_022.OUT</p></td>
+<td><p>1149464816.402932</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.16</p></td>
+<td><p>10.71</p></td>
+<td><p>277.5</p></td>
+<td><p>25.39</p></td>
+<td><p>13.589</p></td>
+<td><p>12</p></td>
+<td></td>
+<td><p>POWER_ABS_002.OUT</p></td>
+<td><p>138944163.638549</p></td>
+</tr>
+<tr class="row-even"><td><p>1.85</p></td>
+<td><p>13.54</p></td>
+<td><p>277.2</p></td>
+<td><p>16.21</p></td>
+<td><p>8.674</p></td>
+<td><p>8</p></td>
+<td></td>
+<td><p>POWER_ABS_009.OUT</p></td>
+<td><p>234565689.801772</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.05</p></td>
+<td><p>16.51</p></td>
+<td><p>276.4</p></td>
+<td><p>7.77</p></td>
+<td><p>4.159</p></td>
+<td><p>9</p></td>
+<td><p>x</p></td>
+<td><p>POWER_ABS_012.OUT</p></td>
+<td><p>76625472.247148</p></td>
+</tr>
+<tr class="row-even"><td><p>1.81</p></td>
+<td><p>9.11</p></td>
+<td><p>298.6</p></td>
+<td><p>28.46</p></td>
+<td><p>8.297</p></td>
+<td><p>7</p></td>
+<td></td>
+<td><p>POWER_ABS_015.OUT</p></td>
+<td><p>205252148.144181</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.16</p></td>
+<td><p>13.35</p></td>
+<td><p>295.7</p></td>
+<td><p>10.7</p></td>
+<td><p>3.12</p></td>
+<td><p>13</p></td>
+<td></td>
+<td><p>POWER_ABS_003.OUT</p></td>
+<td><p>12932737.5357336</p></td>
+</tr>
+<tr class="row-even"><td><p>1.49</p></td>
+<td><p>7.12</p></td>
+<td><p>304.6</p></td>
+<td><p>22.86</p></td>
+<td><p>6.664</p></td>
+<td><p>3</p></td>
+<td></td>
+<td><p>POWER_ABS_024.OUT</p></td>
+<td><p>1933807850.66</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.66</p></td>
+<td><p>11.02</p></td>
+<td><p>297.2</p></td>
+<td><p>26.48</p></td>
+<td><p>7.72</p></td>
+<td><p>15</p></td>
+<td></td>
+<td><p>POWER_ABS_013.OUT</p></td>
+<td><p>161208626.795492</p></td>
+</tr>
+<tr class="row-even"><td><p>2.08</p></td>
+<td><p>16.53</p></td>
+<td><p>295.6</p></td>
+<td><p>5.28</p></td>
+<td><p>1.54</p></td>
+<td><p>10</p></td>
+<td></td>
+<td><p>POWER_ABS_007.OUT</p></td>
+<td><p>13757051.63756</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.65</p></td>
+<td><p>13.23</p></td>
+<td><p>296.2</p></td>
+<td><p>6.22</p></td>
+<td><p>1.813</p></td>
+<td><p>21</p></td>
+<td></td>
+<td><p>POWER_ABS_005.OUT</p></td>
+<td><p>15581540.517641</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pmec.html" class="btn btn-neutral float-left" title="PMEC Site" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="acoustics.html" class="btn btn-neutral float-right" title="Acoustic Effects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Sandia National Laboratories.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

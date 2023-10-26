@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sedimentation Analysis (Shear Stress) &mdash; SEAT [1.0.0-beta1] documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=9eba97ea"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Larval Transport Analysis (Velocity)" href="velocity.html" />
+    <link rel="prev" title="Tanana River Site" href="tanana.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SEAT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../file_access.html">Accessing Tutorial Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prepare_style_files.html">Setting Up Style Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_map_services.html">Quick Map Services</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tanana.html">Tanana River Site</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sedimentation Analysis (Shear Stress)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="velocity.html">Larval Transport Analysis (Velocity)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pmec/pmec.html">PMEC Site</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/modules.html">Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SEAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../tutorials.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="tanana.html">Tanana River Site</a></li>
+      <li class="breadcrumb-item active">Sedimentation Analysis (Shear Stress)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/tanana/sedimentation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sedimentation-analysis-shear-stress">
+<h1>Sedimentation Analysis (Shear Stress)<a class="headerlink" href="#sedimentation-analysis-shear-stress" title="Link to this heading"></a></h1>
+<p>Evaluate the impact of CEC devices on sediment mobility considering a single median grain size receptor in a CSV file.</p>
+<section id="input">
+<h2>Input<a class="headerlink" href="#input" title="Link to this heading"></a></h2>
+<p>At this point you should have already setup the input files as detailed in <a class="reference internal" href="tanana.html#preparing-input-files"><span class="std std-ref">Preparing Demo Input Files</span></a>. To run this demonstration, use the <strong>Load GUI Inputs</strong> button located at the bottom left of the SEAT GUI, navigate to <code class="file docutils literal notranslate"><span class="pre">DEMO/unstructured</span> <span class="pre">DEMO/shear_stress_with_receptor_demo.ini</span></code>, and click OK to load the inputs. If you need detailed instructions on how to load inputs, please refer to the <a class="reference internal" href="../../gui/save_load_config.html#save-load-config"><span class="std std-ref">Save &amp; Load Configuration</span></a> section in the <a class="reference internal" href="../../gui/gui.html#gui"><span class="std std-ref">Graphical User Interface</span></a> documention.</p>
+<p>Refer to <a class="reference internal" href="tanana.html#unstructured-files"><span class="std std-ref">Tanana River Demo Files</span></a> for details on the model data which consists of individual .nc files for each flow return period. The period within the .nc filename determines the probability of occurrence.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ensure to reset the complete path to match the location on your machine. Your paths will be different than the ones shown in the example below.</p>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/tanana_shear_stress_with_receptor_input.webp"><img alt="Tanana sedimentation example input" src="../../_images/tanana_shear_stress_with_receptor_input.webp" style="width: 801.0px; height: 623.0px;" /></a>
+</figure>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<p>The above input set evaluates the impact on sediment mobility considering a single median grain size receptor in a CSV file. The probability-weighted shear stress with devices is compared to the scenario without devices. The resulting stressor (change in shear stress), stressor with receptor (change in sediment mobility), and the reclassified stressor from the analysis are illustrated below.</p>
+<p>Each layer will look as shown below. To add the map layer see the <a class="reference internal" href="../quick_map_services.html#map"><span class="std std-ref">Quick Map Services</span></a> section.</p>
+<table class="image-matrix docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../../_images/tanana_shear_stress_layers.webp"><img alt="Layers" class="align-center" src="../../_images/tanana_shear_stress_layers.webp" style="width: 187.6px; height: 302.4px;" /></a>
+<div style="text-align: center;">Layers Legend</div></td>
+<td><a class="reference internal image-reference" href="../../_images/tanana_shear_stress_stressor_reclassified.webp"><img alt="Calculated Stressor Reclassified" class="align-center" src="../../_images/tanana_shear_stress_stressor_reclassified.webp" style="width: 357.75px; height: 289.5px;" /></a>
+<div style="text-align: center;">Calculated Stressor Reclassified</div></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="../../_images/tanana_shear_stress_stressor_with_receptor.webp"><img alt="Stressor with Receptor" class="align-center" src="../../_images/tanana_shear_stress_stressor_with_receptor.webp" style="width: 358.0px; height: 290.0px;" /></a>
+<div style="text-align: center;">Stressor with Receptor</div></td>
+<td><a class="reference internal image-reference" href="../../_images/tanana_shear_stress_stressor.webp"><img alt="Calculated Stressor" class="align-center" src="../../_images/tanana_shear_stress_stressor.webp" style="width: 358.25px; height: 289.5px;" /></a>
+<div style="text-align: center;">Calculated Stressor</div></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output Files</strong></p>
+<p>Additional output files can be found in the specifed Output folder.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Output
+└───Shear_stress_with_receptor
+        calculated_stressor.csv
+        calculated_stressor.tif
+        calculated_stressor_at_receptor.csv
+        calculated_stressor_reclassified.csv
+        calculated_stressor_reclassified.tif
+        calculated_stressor_reclassified_at_receptor.csv
+        calculated_stressor_with_receptor.csv
+        calculated_stressor_with_receptor.tif
+        receptor.tif
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tanana.html" class="btn btn-neutral float-left" title="Tanana River Site" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="velocity.html" class="btn btn-neutral float-right" title="Larval Transport Analysis (Velocity)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Sandia National Laboratories.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
